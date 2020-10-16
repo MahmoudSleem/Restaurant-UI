@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'banner_widget_area.dart';
+import 'belawl_list_view.dart';
 class MyHomePage extends StatelessWidget {
 
   @override
@@ -14,14 +15,20 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(icon: Icon(Icons.menu),onPressed: (){},),
-                  Text('Foodes' , style: TextStyle(fontSize: 25 , fontFamily: "Samantha"),),
-                  IconButton(icon: Icon(Icons.person),onPressed: (){},)
-                ],
-              )
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 5, 10, 2),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton(icon: Icon(Icons.menu),onPressed: (){},),
+                    Text('Foodes' , style: TextStyle(fontSize: 54 , fontFamily: "Samantha"),),
+                    IconButton(icon: Icon(Icons.person),onPressed: (){},)
+                  ],
+                ),
+              ),
+              BannerWidgetArea(),
+              BelawListView(),
+
 
             ],
           ),
